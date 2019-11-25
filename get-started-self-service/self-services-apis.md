@@ -39,7 +39,13 @@ At this stage you are using the testing environment, where you will enjoy a fixe
 
 For our first call, let's get a list of possible destinations from Paris for a maximum amount of 200 EUR using the [Flight Inspiration Search API](https://developers.amadeus.com/self-service/category/203/api-doc/3/api-docs-and-example/10001), which returns a list of destinations from a given origin along with the cheapest price for each one.
 
-Before making your first API call, you need to get your **access token**. For security purposes we implemented the `oauth2` process that will give you your access token based on your `API Key` and `API Secret.`
+Before making your first API call, you need to get your **access token**. For security purposes we implemented the `oauth2` process that will give you your access token based on your `API Key` and `API Secret.` In order to retrieve the **token,** the we need to send a `POST` request to the following endpoint `/v1/security/oauth2/token,`with the correct `Content-Type` header and body:
+
+```bash
+curl "https://test.api.amadeus.com/v1/security/oauth2/token" \
+     -H "Content-Type: application/x-www-form-urlencoded" \
+     -d "grant_type=client_credentials&client_id={client_id}&client_secret={client_secret}"
+```
 
 {% hint style="warning" %}
 Please take a look at our [Authorization guide](https://developers.amadeus.com/self-service/apis-docs/guides/authorization) to understand how the process works in deep.

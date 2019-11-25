@@ -5,7 +5,7 @@
   * [Your first call](get-started-self-service/self-services-apis.md)
   * [Self Service vs Enterprise](get-started-self-service/self-service-vs-enterprise.md)
   * [Moving to production](get-started-self-service/moving-to-production.md)
-  * [Travel industry](get-started-self-service/travel-industry.md)
+  * [Get started with flight booking](get-started-self-service/travel-industry.md)
 * [Guides](guides/README.md)
   * [Authorization](guides/authorization.md)
   * [Error Handling](guides/errors.md)
