@@ -1,8 +1,11 @@
+---
+description: >-
+  Java usually refers to the programming language but also to the platform: a
+  set of tools -virtual machine, compiler and libraries- which allow developers
+  to create cross-platform applications under th
+---
+
 # Java SDK
-
-_Java_ usually refers to the programming language but also to the platform: a set of tools -virtual machine, compiler and libraries- which allow developers to create cross-platform applications under the concept of _write once, run anywhere_.
-
-Although it sounds scary, is surprisingly easy and takes less than 1 hour! But that's not the pourpose of this tutorial, so downloading a build seems like a good idea.
 
 ## OpenJDK? Oracle JDK? help!
 
@@ -15,32 +18,39 @@ There are many JDK implementations, but the most used ones are:
 * [OpenJDK](http://jdk.java.net/). Oracle GPL license unbranded builds of the OpenJDK.
 * [Oracle JDK](http://www.oracle.com/technetwork/java/javase/downloads/). Branded builds from Oracle that could be used without cost.
 
-But there are more implementations like [Zulu](https://www.azul.com/downloads/zulu/), [IBM JDK](https://developer.ibm.com/javasdk/support/lifecycle/), [Red Hat](https://developers.redhat.com/products/openjdk/overview/) or [AdoptOpenJDK](https://adoptopenjdk.net/).
+There are more implementations like [Zulu](https://www.azul.com/downloads/zulu/), [IBM JDK](https://developer.ibm.com/javasdk/support/lifecycle/), [Red Hat](https://developers.redhat.com/products/openjdk/overview/) or [AdoptOpenJDK](https://adoptopenjdk.net/).
 
 ## Installation
 
-All the examples are based on **Oracle JDK version 8**, so let's see how to install it.
+All the examples are based on **AdoptOpenJDK version 8**, so let's see how to install it.
 
 ### Linux / Windows
 
-Go to [Oracle Java website](https://java.com/en/download/manual.jsp), accept the license and download the tarball \(Version 8 Update 191 at the time of writting this\).
+Go to [AdoptOpenJDK website](https://adoptopenjdk.net/) and download the tarball \(Version 8 at the time of writting this\).
 
 Make sure the new Java installation is the default Java in your system:
 
-* On Linux, use `update-alternatives --config java` whenever is possible.
+* Extract the `.tar.gz`.
 * Add `bin` directory to your PATH environment.
 * Export a new `JAVA_HOME` environment variable pointing to the directory where Java has been installed.
+* Check that Java has installed correctly
+
+```text
+java -version
+```
+
+{% hint style="info" %}
+On Linux, use `update-alternatives --config java` whenever is possible.
+{% endhint %}
 
 ### macOS
 
-We recommend to use **brew** if possible. If you haven't installed brew already [install it!](http://brew.sh/)
-
-Then install **Java 8** as follows:
+We recommend to use **brew** if possible. If you haven't installed brew already [install it!](http://brew.sh/)  Then install **Java** as follows:
 
 ```bash
 brew cask uninstall java
-brew tap caskroom/versions
-brew cask install java8
+brew tap adoptopenjdk/openjdk
+brew cask install adoptopenjdk8
 ```
 
 ## Setting up the environment
@@ -105,7 +115,7 @@ You'll notice a few new files in your root folder. You can freely add them to yo
 
 1. Edit the `build.gradle` file with your favourite editor and add:
 
-```text
+```java
 apply plugin: 'java'
 apply plugin: 'application'
 
@@ -145,14 +155,14 @@ So far we have built a very simple piece of code. Let's do something cool by cal
 
 According to our [Java SDK](https://github.com/amadeus4dev/amadeus-java) documentation, we need to update our `build.gradle` file to include the following dependencies:
 
-```text
+```java
 compile 'com.google.code.gson:gson:2.8.5'
 compile "com.amadeus:amadeus-java:1.1.2"
 ```
 
 Our new `build.gradle` will look like:
 
-```text
+```java
 apply plugin: 'java'
 apply plugin: 'application'
 
@@ -215,8 +225,4 @@ Finally, let's execute the sample:
 > Task :run
 FlightDestination(type=flight-destination, origin=MAD, destination=BIO, departureDate=Sat Nov 17 00:00:00 CET 2018, returnDate=Wed Nov 21 00:00:00 CET 2018, price=FlightDestination.Price(total=92.26))
 ```
-
-## What's next?
-
-During this tutorial we have learnt how to set up a Java project from scratch and how to make a first API call using the Amadeus Java SDK. But the posibilites are huge given the rich Java ecosystem \(Android, web or console applications\). Let your imagination fly!
 

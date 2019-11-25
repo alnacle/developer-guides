@@ -1,6 +1,10 @@
-# Error Handling
+---
+description: >-
+  The Amadeus for Developers APIs use HTTP status codes to communicate if a
+  request has been successfully processed or not.
+---
 
-In this tutorial you will learn how to understand and handle errors with our APIs.
+# Common Errors
 
 ## Types of Errors
 
@@ -13,28 +17,28 @@ There two main types of errors depending on which side of the flow happen:
 
 If your API request is invalid you will receive a `Client Error` response from the system, with a HTTP `4xx` status code. The body of the response will match the format defined in our `swagger` schema and generally provides more information on why the request was invalid.
 
-#### 1. Authorization Errors
+#### Authorization Errors
 
 **401 Invalid Token**
 
 It usually happens when the access token provided in the Authorization header is no longer valid because it has already expired. In this particular case you would need to request a new access token.
 
-```text
+```javascript
 {
-    "errors": [
-        {
-            "code": 38190,
-            "title": "Invalid access token",
-            "detail": "The access token provided in the Authorization header is invalid",
-            "status": 401
-        }
-    ]
+  "errors": [
+      {
+        "code": 38190,
+        "title": "Invalid access token",
+        "detail": "The access token provided in the Authorization header is invalid",
+        "status": 401
+      }
+  ]
 }
 ```
 
 **400 Unsupported Grant Type**
 
-When trying to use a grant type different than `client credentials`. Make sure you are following our [authorization](authorization.md) guide.
+When trying to use a grant type different than `client credentials`. Make sure you are following our [authorization](../authorization.md) guide.
 
 ```javascript
 {
@@ -58,13 +62,13 @@ The client credentials have invalid format and are not recognized.
 }
 ```
 
-#### 2. Data Format Errors
+#### Data Format Errors
 
 **400 Location format**
 
 The location parameter is expected to use IATA standard.
 
-```text
+```javascript
 {
     "errors": [
         {
@@ -98,7 +102,7 @@ The location parameter is expected to use IATA standard.
 }
 ```
 
-#### 3. Resource Errors
+#### Resource Errors
 
 **401 Resource not found**
 
