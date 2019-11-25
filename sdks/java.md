@@ -1,4 +1,4 @@
-# java
+# Java SDK
 
 ## 3 billion devices run Java, do you?
 

@@ -1,4 +1,4 @@
-# guides
+# Guides
 
 ## Getting Super Powers
 
