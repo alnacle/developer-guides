@@ -1,7 +1,7 @@
 # Error Handling
 
-In this tutorial you will learn how to understand and handle errors with our APIs. 
- 
+In this tutorial you will learn how to understand and handle errors with our APIs.
+
 ## Types of Errors
 
 There two main types of errors depending on which side of the flow happen:
@@ -9,23 +9,17 @@ There two main types of errors depending on which side of the flow happen:
 * Client: typically when the request has not been properly built. We can debug and fix.
 * Server: when something happened on the server side and has to be reported.
 
-
 ### Client Errors
 
-If your API request is invalid you will receive a `Client Error` response from
-the system, with a HTTP `4xx` status code. The body of the response will match
-the format defined in our `swagger` schema and generally provides more
-information on why the request was invalid.
+If your API request is invalid you will receive a `Client Error` response from the system, with a HTTP `4xx` status code. The body of the response will match the format defined in our `swagger` schema and generally provides more information on why the request was invalid.
 
 #### 1. Authorization Errors
 
-##### 401 Invalid Token
+**401 Invalid Token**
 
-It usually happens when the access token provided in the Authorization header is
-no longer valid because it has already expired. In this particular case you
-would need to request a new access token.
+It usually happens when the access token provided in the Authorization header is no longer valid because it has already expired. In this particular case you would need to request a new access token.
 
-```
+```text
 {
     "errors": [
         {
@@ -38,13 +32,11 @@ would need to request a new access token.
 }
 ```
 
-##### 400 Unsupported Grant Type
+**400 Unsupported Grant Type**
 
-When trying to use a grant type different than  `client credentials`. Make sure
-you are following our [authorization](authorization.md) guide.
+When trying to use a grant type different than `client credentials`. Make sure you are following our [authorization](authorization.md) guide.
 
-
-```json
+```javascript
 {
     "error": "unsupported_grant_type",
     "error_description": "Only client_credentials value is allowed for the body parameter grant_type",
@@ -53,11 +45,11 @@ you are following our [authorization](authorization.md) guide.
 }
 ```
 
-##### 401 Invalid consumer key
+**401 Invalid consumer key**
 
 The client credentials have invalid format and are not recognized.
 
-```json
+```javascript
 {
     "error": "invalid_client",
     "error_description": "Client credentials are invalid",
@@ -68,11 +60,11 @@ The client credentials have invalid format and are not recognized.
 
 #### 2. Data Format Errors
 
-##### 400 Location format
+**400 Location format**
 
 The location parameter is expected to use IATA standard.
 
-```
+```text
 {
     "errors": [
         {
@@ -88,9 +80,9 @@ The location parameter is expected to use IATA standard.
 }
 ```
 
-##### 400 Collapse source format
+**400 Collapse source format**
 
-```json
+```javascript
 {
     "errors": [
         {
@@ -108,12 +100,11 @@ The location parameter is expected to use IATA standard.
 
 #### 3. Resource Errors
 
-##### 401 Resource not found
+**401 Resource not found**
 
-The endpoint or URL does not exists. Probably you are trying to call a non
-existing endpoint. Make sure this endpoint is correctly spelled.
+The endpoint or URL does not exists. Probably you are trying to call a non existing endpoint. Make sure this endpoint is correctly spelled.
 
-```json
+```javascript
 {
     "errors": [
         {
@@ -128,16 +119,11 @@ existing endpoint. Make sure this endpoint is correctly spelled.
 
 ### Server Errors
 
-If something went wrong during the execution of your request, you will receive
-a Server error in response from the system, with a HTTP `5xx` status code. The
-body will again match the defined error format, allowing your application to
-easily read it and display an appropriate message to the client. It may also
-carry some debugging information which you can submit to us if you would like
-us to investigate the error further.
+If something went wrong during the execution of your request, you will receive a Server error in response from the system, with a HTTP `5xx` status code. The body will again match the defined error format, allowing your application to easily read it and display an appropriate message to the client. It may also carry some debugging information which you can submit to us if you would like us to investigate the error further.
 
 The following example shows an internal server error:
 
-```json
+```javascript
 {
     "errors": [
         {
@@ -149,3 +135,4 @@ The following example shows an internal server error:
     ]
 }
 ```
+
