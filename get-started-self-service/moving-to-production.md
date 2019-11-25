@@ -47,7 +47,7 @@ Once you get your production key you will need to change your source code to:
 
 * change your `API key` and `API secret` to your new production keys 
 
-If you are using our \[SDKs\]\('[https://github.com/amadeus4dev](https://github.com/amadeus4dev)'\), just initialise the client as follows:
+If you are using our [SDKs](https://github.com/amadeus4dev), just initialise the client as follows:
 
 ```python
 amadeus = Client(client_id='YOUR_PRODUCTION_CLIENT_ID',
