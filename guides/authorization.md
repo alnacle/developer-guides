@@ -10,7 +10,9 @@ The basic steps are:
 4. Make a call to our authorization server to get an access token
 5. Call the APIs you want using the access token
 
-> Please insure that you do not commit your `API Key` and your `API Secret` as these are strictly private.
+{% hint style="info" %}
+Please make sure that you do not share your `API Key` and your `API Secret` as these are strictly private.
+{% endhint %}
 
 ## Introduction to OAuth
 
@@ -45,18 +47,16 @@ The authorization server will respond with a JSON object containing the followin
 * `expires_in` an integer representing the expiration time \(in seconds\) of the given token.
 * `state` with the value `approved`
 
-## Examples of how to get the token
+## Getting the token through examples
 
 ### cURL
 
 To request a new token using the `cURL` command you need to make a `POST` request to the following endpoint `/v1/security/oauth2/token`.
 
 ```bash
-curl \
--X POST \
--H "Content-Type: application/x-www-form-urlencoded" \
-https://test.api.amadeus.com/v1/security/oauth2/token \
--d "grant_type=client_credentials&client_id={client_id}&client_secret={client_secret}"
+curl "https://test.api.amadeus.com/v1/security/oauth2/token" \
+     -H "Content-Type: application/x-www-form-urlencoded" \
+     -d "grant_type=client_credentials&client_id={client_id}&client_secret={client_secret}"
 ```
 
 As we are sending the parameters in the body of the HTTP message as name/value pairs separated by the ampersand \(&\), we need to set the header `content-type` to `application/x-www-form-urlencoded`.
@@ -84,9 +84,8 @@ To get access to the API you want, you need to add the `authorization` header to
 You can then call, for example, the `Check-in Links` API to retrieve the check-in URL for Iberia \(`IB`\):
 
 ```bash
-curl -X GET \
-  "https://test.api.amadeus.com/v2/reference-data/urls/checkin-links?airline=1X" \
-      -H "Authorization: Bearer CpjU0sEenniHCgPDrndzOSWFk5mN"
+curl "https://test.api.amadeus.com/v2/reference-data/urls/checkin-links?airline=1X" \
+     -H "Authorization: Bearer CpjU0sEenniHCgPDrndzOSWFk5mN"
 ```
 
 ```javascript

@@ -2,7 +2,7 @@
 description: Learn the basics for getting a list of flight offers in less than 3 minutes.
 ---
 
-# Your first call in 3 minutes
+# Your first call
 
 ## Step 1: Set up your account
 
@@ -37,8 +37,6 @@ At this stage you are using the testing environment, where you will enjoy a fixe
 
 ## Step **3**: Make your first call
 
-We recommend you use one of our [existing SDKs](https://github.com/amadeus4dev) available for Node, Java, Python and Ruby, but for this example we will use [cURL](https://curl.haxx.se/).
-
 For our first call, let's get a list of possible destinations from Paris for a maximum amount of 200 EUR using the [Flight Inspiration Search API](https://developers.amadeus.com/self-service/category/203/api-doc/3/api-docs-and-example/10001), which returns a list of destinations from a given origin along with the cheapest price for each one.
 
 Before making your first API call, you need to get your **access token**. For security purposes we implemented the `oauth2` process that will give you your access token based on your `API Key` and `API Secret.`
@@ -53,8 +51,10 @@ Our call is therefore:
 
 ```bash
 curl 'https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=PAR&maxPrice=200' \
-      -H 'Authorization: Bearer {{token}}'
+      -H 'Authorization: Bearer ABCDEFGH12345'
 ```
+
+Note how we add the `Authorization` header to the request with value `Bearer` string concatenated with the token previously requested
 
 The response returns a `JSON` object containing a list of destinations matching our criteria:
 

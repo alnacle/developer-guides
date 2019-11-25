@@ -1,14 +1,12 @@
 # Java SDK
 
-## 3 billion devices run Java, do you?
-
 _Java_ usually refers to the programming language but also to the platform: a set of tools -virtual machine, compiler and libraries- which allow developers to create cross-platform applications under the concept of _write once, run anywhere_.
-
-Despite the complexity of the Java ecosystem, it's important to understant that there is only one set of source code for the JDK released under GPL license and hosted at [OpenJDK](http://openjdk.java.net/projects/jdk/). You can follow [these instructions](http://hg.openjdk.java.net/jdk9/jdk9/raw-file/tip/common/doc/building.html) to compile and generate your own JDK flavour.
 
 Although it sounds scary, is surprisingly easy and takes less than 1 hour! But that's not the pourpose of this tutorial, so downloading a build seems like a good idea.
 
 ## OpenJDK? Oracle JDK? help!
+
+Despite the complexity of the Java ecosystem, it's important to understant that there is only one set of source code for the JDK released under GPL license and hosted at [OpenJDK](http://openjdk.java.net/projects/jdk/). You can follow [these instructions](http://hg.openjdk.java.net/jdk9/jdk9/raw-file/tip/common/doc/building.html) to compile and generate your own JDK flavour.
 
 Different vendors build the OpenJDK adding additional tools, utilities or branding elements, but never modifing the language. As result the vendor provides a new build with some unique vendor capabilities or certification processes.
 
