@@ -7,7 +7,8 @@
   * [java](guides/java.md)
   * [Understanding Pagination](guides/pagination.md)
 
-## APIs
+## API Reference <a id="apis"></a>
 
 * [Flight Inspiration Search](apis/flight-inspiration-search.md)
+* [Flight Orders Search](apis/flight-orders-search.md)
 
