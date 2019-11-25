@@ -12,7 +12,9 @@
     * [Rate Limits](guides/permissions-and-errors/rate-limits.md)
     * [Common Errors](guides/permissions-and-errors/errors.md)
   * [Pagination](guides/pagination.md)
-* [SDKs](sdks/README.md)
-  * [Java SDK](sdks/java.md)
-  * [Python SDK](sdks/python-sdk.md)
+* [Tooling](sdks/README.md)
+  * [Java SDK](sdks/java/README.md)
+    * [Setting up the environment](sdks/java/setting-up-the-environment.md)
+    * [SDK Installation](sdks/java/sdk-installation.md)
+    * [Getting started](sdks/java/getting-started.md)
 
