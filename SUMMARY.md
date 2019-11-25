@@ -14,8 +14,3 @@
   * [Python SDK](sdks/python-sdk.md)
   * [Java SDK](sdks/java.md)
 
-## API Reference <a id="apis"></a>
-
-* [Flight Inspiration Search](apis/flight-inspiration-search.md)
-* [Flight Orders Search](apis/flight-orders-search.md)
-
