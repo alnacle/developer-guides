@@ -2,9 +2,9 @@
 description: Learn the basics for getting a list of flight offers in less than 3 minutes.
 ---
 
-# Your first call
+# Making your first API call
 
-## Step 1: Set up your account
+## Step 1: Create an account
 
 The first step to start using Amadeus Self-Service APIs is to register and create an account:
 
@@ -35,9 +35,11 @@ All you need to do is to attach an alphanumeric string called **token** to your 
 At this stage you are using the testing environment, where you will enjoy a fixed free number of free API call quota per month for all your applications. When you reach the limit, you will receive an error message. Use this limited data collection to prototype your app and get ready for launching it to the market.
 {% endhint %}
 
-## Step **3**: Make your first call
+## Step **3**: calling the API
 
 For our first call, let's get a list of possible destinations from Paris for a maximum amount of 200 EUR using the [Flight Inspiration Search API](https://developers.amadeus.com/self-service/category/203/api-doc/3/api-docs-and-example/10001), which returns a list of destinations from a given origin along with the cheapest price for each one.
+
+### Creating the Request
 
 Before making your first API call, you need to get your **access token**. For security purposes we implemented the `oauth2` process that will give you your access token based on your `API Key` and `API Secret.` In order to retrieve the **token,** the we need to send a `POST` request to the following endpoint `/v1/security/oauth2/token,`with the correct `Content-Type` header and body:
 
@@ -60,7 +62,9 @@ curl 'https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=PAR&ma
       -H 'Authorization: Bearer ABCDEFGH12345'
 ```
 
-Note how we add the `Authorization` header to the request with value `Bearer` string concatenated with the token previously requested
+Note how we add the `Authorization` header to the request with value `Bearer` string concatenated with the token previously requested.
+
+### Evaluating the Response
 
 The response returns a `JSON` object containing a list of destinations matching our criteria:
 

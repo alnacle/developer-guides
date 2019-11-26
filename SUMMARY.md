@@ -2,7 +2,7 @@
 
 * [Amadeus for Developers Guides](README.md)
 * [Getting Started](get-started-self-service/README.md)
-  * [Your first call](get-started-self-service/self-services-apis.md)
+  * [Making your first API call](get-started-self-service/self-services-apis.md)
   * [Self Service vs Enterprise](get-started-self-service/self-service-vs-enterprise.md)
   * [Moving to production](get-started-self-service/moving-to-production.md)
   * [Get started with flight booking](get-started-self-service/travel-industry.md)
