@@ -1,4 +1,4 @@
-# Guides
+# API Guides
 
 ## Getting Super Powers
 

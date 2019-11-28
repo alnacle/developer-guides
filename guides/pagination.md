@@ -1,6 +1,10 @@
 # Pagination
 
-Sometimes, when you’re making calls to the [Amadeus for Developers](http://developers.amadeus.com) REST APIs, there will be a lot of results to return. Let’s say your initial call is asking for all the flight offers using the `Flight Low-fare Search` API; the result could be a massive response with hundreds of pages. Don't panic. Pagination comes to the rescue, splitting the results into different pages to make sure responses are easier to handle.
+Sometimes, when you’re making calls to some of the [Amadeus for Developers](http://developers.amadeus.com) REST APIs, the result could be a massive response with hundreds of pages. Don't panic. Pagination comes to the rescue, splitting the results into different pages to make sure responses are easier to handle.
+
+{% hint style="danger" %}
+Please be aware that no all APIs support pagination. Don't forget to check each API reference!
+{% endhint %}
 
 ## Accessing the paginated results
 

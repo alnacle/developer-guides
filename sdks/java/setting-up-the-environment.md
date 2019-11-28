@@ -4,7 +4,7 @@ description: >-
   it.
 ---
 
-# Setting up the environment
+# Set up the environment
 
 ## Java JDK Installation
 

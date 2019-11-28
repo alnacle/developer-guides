@@ -4,7 +4,7 @@ description: >-
   in a Java project.
 ---
 
-# SDK Installation
+# Installation
 
 The SDK can be installed by adding a `Gradle` dependency or `Maven` dependency, or by cloning the source into a project. Additionally it can be installed by downloading one of the precompiled JARs from the releases page on [GitHub](https://github.com/amadeus4dev/amadeus-java).
 
