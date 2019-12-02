@@ -2,7 +2,7 @@
 description: >-
   Java usually refers to the programming language but also to the platform: a
   set of tools -virtual machine, compiler and libraries- which allow developers
-  to create cross-platform applications under th
+  to create cross-platform applications.
 ---
 
 # Java SDK
