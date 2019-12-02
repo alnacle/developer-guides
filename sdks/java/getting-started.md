@@ -16,7 +16,7 @@ The requirements to follow this tutorial are the following:
 
 * Your favorite editor
 * Java correctly installed \(see previous section\)
-* grade
+* gradle
 * Amadeus for Developers API key
 {% endhint %}
 
