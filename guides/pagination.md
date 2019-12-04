@@ -3,7 +3,7 @@
 Sometimes, when you’re making calls to some of the [Amadeus for Developers](http://developers.amadeus.com) REST APIs, the result could be a massive response with hundreds of pages. Don't panic. Pagination comes to the rescue, splitting the results into different pages to make sure responses are easier to handle.
 
 {% hint style="danger" %}
-Please be aware that no all APIs support pagination. Don't forget to check each API reference!
+Please be aware that no all APIs support pagination. Don't forget to check the API reference!
 {% endhint %}
 
 ## Accessing the paginated results

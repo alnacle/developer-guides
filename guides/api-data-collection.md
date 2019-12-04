@@ -4,11 +4,11 @@ description: >-
   provided under this environment is limited.
 ---
 
-# API Data Collection
+# Testing Data Collection
 
 Under `Test Environment` the APIs use the following data collections:
 
-* [List of Origin and Destinations](https://github.com/amadeus4dev/data-collection/blob/master/data/flightsearch.md) for `Flight Inspiration Search` and `Flight Cheapest Date Search`.
+* [List of Origin and Destinations](https://github.com/amadeus4dev/data-collection/blob/master/data/flightsearch.md) for `Flight Inspiration Search` and `Flight Cheapest Date Search`
 * [List of Origin and Destinations](https://github.com/amadeus4dev/data-collection/blob/master/data/ti.md) for `Flight Most [Booked|Traveled] Destinations` and `Flight Busiest Traveling Period`.
 * The [following table](https://github.com/amadeus4dev/data-collection/blob/master/data/checkinlinks.md) contains a list of valid airlines for `Flight Check-in Links`.
 * `Airport Nearest Relevant` & `Airport & City Search` contain data from United States, Spain, United Kingdom, Germany and India.

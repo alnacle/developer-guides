@@ -22,7 +22,7 @@ The requirements to follow this tutorial are the following:
 
 Let's do something cool by calling one of our [Flight Search APIs](https://developers.amadeus.com) from your Java code.
 
-Let's start by creating a new folder `AmadeusTest`  on your `$HOME` directory. Switch to this new folder and create a subdirectory structure that will host our project:
+Let's start by creating a new folder `AmadeusTest` on your `$HOME` directory. Switch to this new folder and create a subdirectory structure that will host our project:
 
 ```bash
 mkdir -p src/main/java/flightsearch
@@ -77,7 +77,7 @@ The `run` argument is a task. Each project includes a collection of tasks, each 
 Note that a new folder `build/libs` has been created containing the `jar` file of your project.
 {% endhint %}
 
-Now that we have our skeleton ready, let's extend it to implement a call to the [Flight Inspiration Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-inspiration-search). 
+Now that we have our skeleton ready, let's extend it to implement a call to the [Flight Inspiration Search API](https://developers.amadeus.com/self-service/category/air/api-doc/flight-inspiration-search).
 
 According to the [Java SDK](https://github.com/amadeus4dev/amadeus-java) documentation, we need to update our `build.gradle` file to include the following dependencies:
 
@@ -112,7 +112,7 @@ mainClassName = 'flightsearch.FlightSearch'
 
 Note that we have added `repositories` section in order to retrieve the jar files automatically during the `build` task.
 
-It's time to call the APIs from our Java sample!  Edit the `FlightSearch.java` file and add the necessary imports:
+It's time to call the APIs from our Java sample! Edit the `FlightSearch.java` file and add the necessary imports:
 
 ```java
 import com.amadeus.Amadeus;

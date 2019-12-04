@@ -1,3 +1,9 @@
+---
+description: >-
+  This guide explains how to authorize your API calls to fetch data using OAuth
+  protocol.
+---
+
 # Authorization
 
 In the following guide you will learn how to perform the authorization needed to access all our APIs.
